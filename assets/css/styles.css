@@ -788,34 +788,6 @@ img {
 .swiper-pagination-bullets{
   outline: none;
 }
-/*==================== PROJECT IN MIND ====================*/
-.project{
-  text-align: center;
-}
-
-.project__bg{
-  background-color: var(--first-color-second);
-  padding-top: 3rem;
-}
-
-.project__title{
-  font-size: var(--h2-font-size);
-  margin-bottom: var(--mb-0-75);
-}
-
-.project__description{
-  margin-bottom: var(--mb-1-5);
-}
-
-.project__title,
-.project__description{
-  color:#fff;
-}
-
-.project__img{
-  width: 232px;
-  justify-self: center;
-}
 
 
 /*==================== CONTACT ME ====================*/
@@ -1032,7 +1004,6 @@ img {
   .about__container,
   .portfolio__content,
   .skills__container,
-  .project__container,
   .contact__container,
   .footer__container{
     grid-template-columns: repeat(2, 1fr);
@@ -1174,26 +1145,6 @@ img {
   
   .portfolio__content{
     align-items: center;
-  }
-
-  .project{
-    text-align: initial;
-  }
-
-  .project__bg{
-    background: none;
-  }
-
-  .project__container{
-    background-color: var(--first-color-second);
-    border-radius: 1rem;
-    padding: 3rem 2.5rem 0;
-    grid-template-columns: 1 fr max-content;
-    column-gap: 3rem;
-  }
-
-  .project__data{
-    padding-top: .8rem;
   }
 
   .footer__container{
