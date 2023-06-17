@@ -13,13 +13,13 @@
         <!--==================== CSS ====================-->
         <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>Amaan's portfolio website</title>
+        <title>Responsive Portfolio Website</title>
     </head>
     <body>
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">AmaanTamboli</a>
+                <a href="#" class="nav__logo">Amaan</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
@@ -632,13 +632,13 @@
            
 
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/myweb.jpeg" alt="" class="portfolio__img">
+                            <img src="assets/img/p.png" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">My Portfolio website</h3>
                                 <p class="portfolio__description">Discover my professional journey, skills, and projects through my captivating portfolio website.</p>
 
-                                <a href="https://github.com/Amaan-Tamboli/amaan-tamboli.github.io" target="_blank" class="button button--flex button--small portfolio__button">
+                                <a href="" target="_blank" class="button button--flex button--small portfolio__button">
                                     Github<i class="uil uil-arrow-right button_icon"></i>
                                 </a>
 
@@ -741,6 +741,8 @@
             </section>
 
 
+
+
             <!--==================== CONTACT ME ====================-->
             <section class="contact section" id="contact">
                 <h2 class="section__title">Contact Me</h2>
@@ -773,36 +775,35 @@
                         </div> 
                     </div>
 
-                    <form action="" class="contact__form grid">
+                    <form onsubmit="sendEmail()"; reset(); return false; class="contact__form grid" >
                         <div class="contact__inputs grid">
 
                             <div class="contact__content">
                                 <lavel class="contact__label">Name</lavel>
-                                <input type="text" class="contact__input">
+                                <input type="text" id="name" class="contact__input" required>
                             </div>
 
                             <div class="contact__content">
                                 <lavel class="contact__label">Email</lavel>
-                                <input type="email" class="contact__input">
+                                <input type="email" id="email" class="contact__input" required>
                             </div>
                         </div>
                             <div class="contact__content">
                                 <lavel class="contact__label">Subject</lavel>
-                                <input type="text" class="contact__input">
+                                <input type="text" id="subject" class="contact__input">
                             </div>
                             <div class="contact__content">
                                 <lavel class="contact__label">Message</lavel>
-                                <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                                <textarea name="" id="message" cols="0" rows="7" class="contact__input"></textarea>
                             </div>
 
                        
 
                         <div>
-                            <a href="#" class="button button--flex">
+                            <button class="submit button button--flex msg__button">
                                 Send Message
                                 <i class="uil uil-message button__icon"></i>
-
-                            </a>
+                            </button>
                         </div>
                     </form>
 
@@ -864,5 +865,8 @@
 
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>
+
+        <!--==================== SMTP ====================-->
+        <script src="assets/js/smtp.js"></script>
     </body>
 </html>
