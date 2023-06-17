@@ -204,3 +204,21 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+function sendEmail(){
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "amaan.tamboli20@pccoepune.org",
+        Password : "95667D83C44ABA10E92B928EAF6CC8E9EDF0",
+        From : "amaan.tamboli20@pccoepune.org",
+        To : 'amaan.tamboli20@pccoepune.org',
+        Subject : "New contact from enquiry",
+        Body : "Name : " + document.getElementById('name').value + 
+            "<br>Email : " + document.getElementById('email').value + 
+            "<br>Subject : " + document.getElementById('subject').value + 
+            "<br>Message : " + document.getElementById('message').value
+    }).then(
+      message => alert("Message sent successfully")
+    );
+}
