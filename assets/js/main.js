@@ -203,6 +203,7 @@ themeButton.addEventListener('click', () => {
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
+    changeImageBasedOnTheme();
 })
 
 
@@ -222,3 +223,16 @@ function sendEmail(){
       message => alert("Message sent successfully")
     );
 }
+
+
+// Function to change the image source based on the current theme
+const changeImageBasedOnTheme = () => {
+    const portfolioImage = document.getElementById('portfolio-image');
+    const currentTheme = getCurrentTheme();
+  
+    if (currentTheme === 'dark') {
+      portfolioImage.src = 'assets/img/p_light.jpeg'; // Update the image source for dark theme
+    } else {
+      portfolioImage.src = 'assets/img/p_dark.jpeg'; // Update the image source for light theme
+    }
+  };
